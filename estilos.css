@@ -32,6 +32,7 @@
 }
 .navbar {
     font-family: Verdana;
+    padding-left: 10px;
 }
 .login{
     position: absolute;
@@ -53,8 +54,18 @@
 
 .login:hover{
     color:khaki;
+    text-decoration: underline;
 }
 
 .registro:hover{
     color:khaki;
+    text-decoration: underline;
+}
+
+body{
+    background-color:rgb(177, 208, 209);
+}
+
+.nav-item{
+    padding-left: 20px;
 }
