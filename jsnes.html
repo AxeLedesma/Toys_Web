@@ -9,6 +9,8 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="estilos.css" />
     <link rel="shortcut icon" type="image/png" href="img/icon.jpg" />
+
+
 </head>
 
 <body>
@@ -26,7 +28,8 @@
             <div class="registro">Registrarse</div>
         </a>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light navbar2" style="background-color: hsl(242, 28%, 76%);">
+    <nav class="navbar navbar-expand-lg navbar-light navbar2" aria-label=""
+        style="background-color: hsl(242, 28%, 76%);">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -88,24 +91,24 @@
     <div class="container">
         <div class="row row-cols-auto">
             <div class="card juegos" style="width: 18rem;">
-                <img src="img/jn64/diddy1.jpg" class="card-img-top myImg" alt="" img id="myImg"
+                <img src="img/jsnes/donkey1.jpg" class="card-img-top myImg" alt="" img id="myImg"
                     style="width:100%;max-width:300px">
                 <div class="card-body">
-                    <p class="card-text">Clash at Demonhead <br> $25.000</p>
+                    <p class="card-text">Donkey Kong Country <br> $20.000</p>
                 </div>
             </div>
             <div class="card juegos" style="width: 18rem;">
-                <img src="img/jn64/mario641.jpg" class="card-img-top myImg" alt="" img id="myImg2"
+                <img src="img/jsnes/killer1.jpg" class="card-img-top myImg" alt="" img id="myImg2"
                     style="width:100%;max-width:300px">
                 <div class="card-body">
-                    <p class="card-text">Metal Gear <br> $16.000</p>
+                    <p class="card-text">Killer Instinct <br> $20.000</p>
                 </div>
             </div>
             <div class="card juegos" style="width: 18rem;">
-                <img src="img/jn64/marioparty1.jpg" class="card-img-top myImg" alt="" img id="myImg3"
+                <img src="img/jsnes/mariokart1.jpg" class="card-img-top myImg" alt="" img id="myImg3"
                     style="width:100%;max-width:300px">
                 <div class="card-body">
-                    <p class="card-text">Ducktales <br> $20.000</p>
+                    <p class="card-text">Mario Kart <br> $30.000</p>
                 </div>
             </div>
         </div>
@@ -113,34 +116,73 @@
     <div class="container">
         <div class="row row-cols-auto">
             <div class="card juegos" style="width: 18rem;">
-                <img src="img/jn64/diddy1.jpg" class="card-img-top myImg" alt="" img id="myImg"
+                <img src="img/jsnes/mortal1.jpg" class="card-img-top myImg" alt="" img id="myImg4"
                     style="width:100%;max-width:300px">
                 <div class="card-body">
-                    <p class="card-text">Clash at Demonhead <br> $25.000</p>
+                    <p class="card-text">Mortal Kombat 1<br> $16.000</p>
                 </div>
             </div>
             <div class="card juegos" style="width: 18rem;">
-                <img src="img/jn64/mario641.jpg" class="card-img-top myImg" alt="" img id="myImg2"
+                <img src="img/jsnes/punch1.jpg" class="card-img-top myImg" alt="" img id="myImg5"
                     style="width:100%;max-width:300px">
                 <div class="card-body">
-                    <p class="card-text">Metal Gear <br> $16.000</p>
+                    <p class="card-text">Super Punch Out <br> $25.000</p>
                 </div>
             </div>
             <div class="card juegos" style="width: 18rem;">
-                <img src="img/jn64/marioparty1.jpg" class="card-img-top myImg" alt="" img id="myImg3"
+                <img src="img/jsnes/secret1.jpg" class="card-img-top myImg" alt="" img id="myImg6"
                     style="width:100%;max-width:300px">
                 <div class="card-body">
-                    <p class="card-text">Ducktales <br> $20.000</p>
+                    <p class="card-text">Secret of Mana<br> $45.000</p>
                 </div>
             </div>
         </div>
     </div>
-    <!--
+    <div class="container">
+        <div class="row row-cols-auto">
+            <div class="card juegos" style="width: 18rem;">
+                <img src="img/jsnes/sgng1.jpg" class="card-img-top myImg" alt="" img id="myImg7"
+                    style="width:100%;max-width:300px">
+                <div class="card-body">
+                    <p class="card-text">Super Ghouls N Ghosts <br> $25.000</p>
+                </div>
+            </div>
+            <div class="card juegos" style="width: 18rem;">
+                <img src="img/jsnes/streetfighter1.jpg" class="card-img-top myImg" alt="" img id="myImg8"
+                    style="width:100%;max-width:300px">
+                <div class="card-body">
+                    <p class="card-text">Street Fighter 2 <br> $16.000</p>
+                </div>
+            </div>
+            <div class="card juegos" style="width: 18rem;">
+                <img src="img/jsnes/topgear1.jpg" class="card-img-top myImg" alt="" img id="myImg9"
+                    style="width:100%;max-width:300px">
+                <div class="card-body">
+                    <p class="card-text">Top Gear 1 <br> $16.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" alt="">
+        <div id="caption"></div>
+    </div>
+    <nav aria-label="Super Nintendo Page Navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+            <li class="page-item"><a class="page-link" href="jsnes.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="jsnes2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+        </ul>
+    </nav>
+    <!---
     <div class="footer">
         <p>
             ESTE ES EL FOOTER
         </p>
     </div> -->
+    <script src='script.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
