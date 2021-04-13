@@ -76,7 +76,7 @@
 }
 
 body{
-    background-color:white;
+    background-color:rgb(133, 18, 18);
     padding: 0px;
     margin: 0px;
 }
@@ -88,10 +88,11 @@ body{
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
     background-color:rgb(143, 192, 224);
-    color:white;
+    color:black;
 }
 .juegos{
-     margin: 40px;
+     margin-top: 80px;
+     margin-left:40px;
     
 }
 
@@ -106,14 +107,14 @@ body{
   /* The Modal (background) */
   .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: ab; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow:hidden; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
   
@@ -123,6 +124,10 @@ body{
     display: block;
     width: 80%;
     max-width: 600px;
+  }
+  .modal-content-nes{
+    max-width: 450px; 
+    
   }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -149,7 +154,7 @@ body{
   }
   
   /* The Close Button */
-  .close {
+  .close2 {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -159,8 +164,8 @@ body{
     transition: 0.3s;
   }
   
-  .close:hover,
-  .close:focus {
+  .close2:hover,
+  .close2:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
@@ -180,4 +185,12 @@ body{
   background-color: rgb(185, 17, 17);
   color: white;
   text-align: center;
+  }
+
+  .filtro{
+    padding-right:50px;
+    padding-top: 20px;
+  }
+.filtro button{
+    font-size: 15px;
   }
