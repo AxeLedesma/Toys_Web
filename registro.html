@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="img/icon.jpg" />
-    <script src="https://kit.fontawesome.com/4afc30c9a9.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -24,9 +22,9 @@
             <img src="img/facebook.png" class="fb" alt="facebook"></a>
         <a href="http://www.instagram.com/123bitscl">
             <img src="img/instagram.png" class="instagram" alt="instagram"></a>
+
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light navbar2" aria-label=""
-        style="background-color: hsl(242, 28%, 76%);">
+    <nav class="navbar navbar-expand-lg navbar-light navbar2" style="background-color: hsl(242, 28%, 76%);">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -88,11 +86,20 @@
                 </form>
             </div>
         </div>
+
         <a href="registro.html">
             <button type="button" class="btn btn-danger mr-sm-2">Registro</button>
         </a>
         <button type="button" class="btn btn-danger mr-sm-2" data-toggle="modal"
             data-target="#modal_login">Login</button>
+
+
+        <!-- PROBANDO FORMULARIO DE REGISTRO   -->
+
+
+
+
+
 
         <!--Modal de Login / Registro -->
         <div class="modal fade" id="modal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -124,98 +131,65 @@
             </div>
         </div>
     </nav>
-    <div class="dropdown filtro float-end">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Ordenar por
-        </button>
-        <ul class="dropdown-menu dropdown-menu-lg-start " aria-labelledby="dropdownMenu2">
-            <li><button class="dropdown-item" type="button">Precio más barato</button></li>
-            <li><button class="dropdown-item" type="button">Precio más caro</button></li>
-            <li><button class="dropdown-item" type="button">Orden por nombre: de la A a la Z</button></li>
-            <li><button class="dropdown-item" type="button">Orden por nombre: de la Z a la A</button></li>
-        </ul>
-    </div>
-    <div class="container">
-        <div class="row row-cols-auto">
-            <div class="card juegos" style="width: 18rem;">
-                <img src="img/jsnes/battletoads1.jpg" class="card-img-top myImg" alt="" img id="myImg"
-                    style="width:100%;max-width:300px">
-                <div class="card-body">
-                    <p class="card-text">Battletoads in Battlemaniacs <br> $35.000 <button type="button" class=" btn"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal"><span
-                                class="fas fa-cart-plus"></span></button></p>
-                </div>
-            </div>
-            <div class="card juegos" style="width: 18rem;">
-                <img src="img/jsnes/donkey21.jpg" class="card-img-top myImg" alt="" img id="myImg2"
-                    style="width:100%;max-width:300px">
-                <div class="card-body">
-                    <p class="card-text">Donkey Kong Country 2 <br> $30.000 <button type="button" class=" btn"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal"><span
-                                class="fas fa-cart-plus"></span></button></p>
-                </div>
-            </div>
-            <div class="card juegos" style="width: 18rem;">
-                <img src="img/jsnes/mortal31.jpg" class="card-img-top myImg" alt="" img id="myImg3"
-                    style="width:100%;max-width:300px">
-                <div class="card-body">
-                    <p class="card-text">Mortal Kombat 3 <br> $16.000 <button type="button" class=" btn"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal"><span
-                                class="fas fa-cart-plus"></span></button></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row row-cols-auto">
-            <div class="card juegos" style="width: 18rem;">
-                <img src="img/jsnes/reyleon1.jpg" class="card-img-top myImg" alt="" img id="myImg4"
-                    style="width:100%;max-width:300px">
-                <div class="card-body">
-                    <p class="card-text">Rey Leon<br> $15.000 <button type="button" class=" btn" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"><span class="fas fa-cart-plus"></span></button></p>
-                </div>
-            </div>
-            <div class="card juegos" style="width: 18rem;">
-                <img src="img/jsnes/yoshi1.jpg" class="card-img-top myImg" alt="" img id="myImg5"
-                    style="width:100%;max-width:300px">
-                <div class="card-body">
-                    <p class="card-text">Yoshi's Island <br> $40.000 <button type="button" class=" btn"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal"><span
-                                class="fas fa-cart-plus"></span></button></p>
-                </div>
-            </div>
 
-        </div>
-        <div id="myModal" class="modal">
-            <span class="close2">&times;</span>
-            <img class="modal-content" id="img01" alt="">
-            <div id="caption"></div>
-        </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <h5>Producto agregado a tu carro de compras<h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Seguir viendo</button>
-                        <a href="carro.html">
-                            <button type="button" class="btn btn-secondary">Ir al carro</button></a>
-                    </div>
-                </div>
+    <!--TITULO DEL FORMULARIO-->
+    <h1 class="tituloFomulario"> FORMULARIO DE REGISTRO </h1>
+
+
+
+
+    <!-- PROBANDO FORMULARIO DE REGISTRO   -->
+    <div class="formularioRegistro">
+
+        <div class="input-group mb-3 rutAxel">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">1</span>
             </div>
+            <input type="text" class="form-control" placeholder="RUT" aria-label="RUT" aria-describedby="basic-addon1">
         </div>
-        <nav aria-label="Super Nintendo Page Navigation">
-            <ul class="pagination justify-content-center paginador">
-                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-                <li class="page-item"><a class="page-link" href="jsnes.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="jsnes2.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-            </ul>
-        </nav>
-        <!---
+
+        <div class="input-group mb-3 nombresAxel">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">2</span>
+            </div>
+            <input type="text" class="form-control" placeholder="NOMBRES" aria-label="NOMBRES"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3 apellidosAxel">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">3</span>
+            </div>
+            <input type="text" class="form-control" placeholder="APELLIDOS" aria-label="APELLIDOS"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3 correoAxel">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">4</span>
+            </div>
+            <input type="text" class="form-control" placeholder="CORREO ELECTRONICO" aria-label="CORREO ELECTRONICO"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">5</span>
+            </div>
+            <input type="password" class="form-control mr-sm-2" placeholder="CONTRASEÑA" aria-label="CONTRASEÑA"
+                aria-describedby="basic-addon1">
+            <input type="password" class="form-control " placeholder="REPITA LA CONTRASEÑA"
+                aria-label="REPITA LA CONTRASEÑA" aria-describedby="basic-addon1">
+        </div>
+
+
+
+
+        <button type="button" class="btn btn-info mr-sm-2 botonAceptar   "> Aceptar</button>
+        <button type="button" class="btn btn-danger mr-sm-2 botonCancelar"> Cancelar </button>
+
+
+        <!--
     <div class="footer">
         <p>
             ESTE ES EL FOOTER
@@ -231,6 +205,5 @@
             integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
             crossorigin="anonymous"></script>
         <script src='script.js'></script>
-</body>
 
-</html>
+        </html>

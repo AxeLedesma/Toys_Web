@@ -124,6 +124,4 @@ img.onclick = function () {
 }
 var span = document.getElementsByClassName("close2")[0];
 
-span.onclick = function () {
-    modal.style.display = "none";
-}
+
