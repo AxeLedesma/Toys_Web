@@ -104,6 +104,13 @@ body{
   
   .myImg:hover {opacity: 0.7;}
   
+  /* carrusel */
+  .carro{
+    color: orangered;
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
   /* The Modal (background) */
   .modal {
     display: none; /* Hidden by default */

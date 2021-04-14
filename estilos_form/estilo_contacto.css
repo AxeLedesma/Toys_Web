@@ -1,0 +1,81 @@
+#container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0%;   
+  }
+  .logo{
+    margin-right: 0;
+    margin-left: auto;
+    position: absolute;
+    display: block;
+    width: 31%;
+    top: -6.5%;
+    left: 0px;
+    max-width: 100%;
+}
+.banner{
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    position: relative;
+    
+}
+.fb{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 90%;
+}
+.instagram{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 95%;
+}
+.navbar2 {
+    font-family: Verdana;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 50px;
+}
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  .filtro{
+    padding-right:50px;
+    padding-top: 20px;
+  }
+  .filtro button{
+    font-size: 15px;
+  }
+
+  .form-contacto{
+    width: 600px;
+    margin: auto;
+    background: grey;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .texto-contacto{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .entrada-uno{
+      margin-top: 10px;
+  }
+  .entrada-dos{
+      margin-top: 10px;
+  }
+  .entrada-tres{
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
