@@ -142,6 +142,8 @@ function fn_ocultarEtiquetas() {
     $('#lbl_contrasena').hide();
 
     $('#lbl_contrasena2').hide();
+
+    $('#lbl_cantidad').hide();
 }
 
 function fn_nombreVacio() {
@@ -248,6 +250,55 @@ function fn_contrasenasIguales() {
         $('#txt_contrasena2').removeClass('is-invalid');
         $('#txt_contrasena2').addClass('is-valid');
     }
+}
+
+fn_moneda(valor);
+function fn_moneda() {
+    $.getJSON('https://mindicador.cl/api', function (data) {
+        var indicadores = data;
+        var seleccion = $('#cmb_moneda option:selected').text();
+        var producto = $('#cmb_producto option:selected').text();
+        var valorProducto = 0;
+        var valor = '';
+        var cantidad = $('#txt_cantidad').val();
+        var pago = $('#txt_pago').val();
+        var vuelto = $('#txt_vuelto').val();
+
+
+
+        if (seleccion.toUpperCase() == 'USD') {
+            valor = indicadores.dolar.valor;
+        } else if (seleccion.toUpperCase() == 'EURO') {
+            valor = indicadores.euro.valor;
+        } else if (seleccion.toUpperCase() == 'CLP') {
+            valor = 1;
+        }
+
+        if (producto == 'Consola Nintendo        $100.000 CLP') {
+            valorProducto = 100000;
+        } else if (producto == 'Juego Nintendo           $40.000 CLP') {
+            valorProducto = 40000;
+        } else if (producto == 'Consola PlayStation     $150.000 CLP') {
+            valorProducto = 150000;
+        } else if (producto == 'Juego PlayStation        $45.000 CLP') {
+            valorProducto = 45000;
+        } else if (producto == 'Consola Sega              $80.000 CLP') {
+            valorProducto = 80000;
+        } else if (producto == 'Juego Sega                 $25.000 CLP') {
+            valorProducto = 25000;
+        }
+
+        $('#txt_montoprod').val(valorProducto);
+        $('#txt_total').val(Math.round(valorProducto / valor) * cantidad);
+        $('#txt_pago').keydown(function (e) {
+            console.log(e.keyCode);
+            if (e.keyCode == 13 || e.keyCode == 9 || e.keyCode == 'enter' || e.keyCode == 'tab') {
+                vuelto = $('#txt_vuelto').val(Math.round(pago) - (valorProducto / valor) * cantidad);
+            }
+        }).fail(function () {
+            console.log('Error al consumir la API!');
+        });
+    })
 }
 
 
