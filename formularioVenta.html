@@ -176,14 +176,6 @@
             </div>
             <input type="text" id="txt_total" class="form-control" readonly>
         </div>
-        <!--<p class="botonDesglose">
-            <a class="btn btn-primary faqpreguntas" data-bs-toggle="collapse" href="#collapseExample1" role="button"
-                aria-expanded="false" aria-controls="collapseExample1" onclick="fn_desglose();">
-                Ver desglose
-            </a>
-        </p>
-
-        <div class="collapse" id="collapseExample1">-->
         <div class="botonTotal">
             <button type="button"
                 onclick="fn_monedaVacia(),fn_productoVacio(),fn_cantidadVacia(),fn_moneda(),fn_desglose();"
@@ -203,15 +195,6 @@
         </div>
         <div id="txt_total2" class="desglose">
         </div>
-        <!--<label>
-            Monto producto (*)
-        </label>
-        <div class="input-group mb-3 apellidos">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">4</span>
-            </div>
-            <input type="text" id="txt_montoprod" class="form-control" readonly>
-        </div>-->
         <label>
             Ingrese el monto con el que desea pagar (*)
         </label>
@@ -225,6 +208,8 @@
             Vuelto
         </label>
         <p><small id="lbl_vuelto" class="form-text text-danger">Dinero insuficiente para realizar esta compra</small>
+        </p>
+        <p type="text" class="form-text text-danger" id="txt_vueltoFaltante">
         </p>
         <div class="input-group mb-3 apellidos">
             <div class="input-group-prepend">

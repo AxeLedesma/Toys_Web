@@ -375,11 +375,14 @@ function fn_moneda() {
                 $('#lbl_vuelto').hide();
                 $('#txt_vuelto').removeClass('is-invalid');
                 $('#txt_vuelto').addClass('is-valid');
+                $('#txt_vueltoFaltante').hide();
             }
             if (pago < calculoCompra) {
                 console.log("entre al ELSE IF DEL VUELTO")
                 vuelto = $('#txt_vuelto').val('')
                 $('#lbl_vuelto').show();
+                $('#txt_vueltoFaltante').show();
+                $('#txt_vueltoFaltante').text('Le faltan: $').append(calculoCompra - pago);
                 $('#txt_vuelto').addClass('is-invalid');
             }
 
