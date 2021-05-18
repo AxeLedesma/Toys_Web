@@ -144,6 +144,12 @@ function fn_ocultarEtiquetas() {
     $('#lbl_contrasena2').hide();
 
     $('#lbl_cantidad').hide();
+
+    $('#lbl_moneda').hide();
+
+    $('#lbl_producto').hide();
+
+    $('#lbl_vuelto').hide();
 }
 
 function fn_nombreVacio() {
@@ -252,7 +258,70 @@ function fn_contrasenasIguales() {
     }
 }
 
-fn_moneda(valor);
+function fn_monedaVacia() {
+
+    var moneda = $('#cmb_moneda option:selected').text();
+
+    if (moneda == '-- Seleccione --') {
+
+        $('#lbl_moneda').show();
+
+        $('#cmb_moneda').addClass('is-invalid');
+
+    } else {
+
+        $('#lbl_moneda').hide();
+
+        $('#cmb_moneda').removeClass('is-invalid');
+
+        $('#cmb_moneda').addClass('is-valid');
+
+    }
+}
+
+function fn_productoVacio() {
+
+    var producto = $('#cmb_producto option:selected').text();
+
+    if (producto == '-- Seleccione --') {
+
+        $('#lbl_producto').show();
+
+        $('#cmb_producto').addClass('is-invalid');
+
+    } else {
+
+        $('#lbl_producto').hide();
+
+        $('#cmb_producto').removeClass('is-invalid');
+
+        $('#cmb_producto').addClass('is-valid');
+
+    }
+}
+
+function fn_cantidadVacia() {
+
+    var cantidad = $('#txt_cantidad').val();
+
+    if (cantidad == "") {
+
+        $('#lbl_cantidad').show();
+
+        $('#txt_cantidad').addClass('is-invalid');
+
+    }
+    else {
+        $('#lbl_cantidad').hide();
+
+        $('#txt_cantidad').removeClass('is-invalid');
+
+        $('#txt_cantidad').addClass('is-valid');
+
+    }
+}
+
+
 function fn_moneda() {
     $.getJSON('https://mindicador.cl/api', function (data) {
         var indicadores = data;
@@ -263,7 +332,7 @@ function fn_moneda() {
         var cantidad = $('#txt_cantidad').val();
         var pago = $('#txt_pago').val();
         var vuelto = $('#txt_vuelto').val();
-
+        /*var totalCompra = $('#txt_total').val();*/
 
 
         if (seleccion.toUpperCase() == 'USD') {
@@ -288,17 +357,39 @@ function fn_moneda() {
             valorProducto = 25000;
         }
 
-        $('#txt_montoprod').val(valorProducto);
-        $('#txt_total').val(Math.round(valorProducto / valor) * cantidad);
+        /*$('#txt_montoprod').val(valorProducto);*/
+        var calculoCompra = Math.round(valorProducto / valor) * cantidad;
+        var totalCompra = $('#txt_total').val(calculoCompra)
+        console.log(calculoCompra)
+        function fn_desglose() {
+            $('#txt_producto').text('Producto:   ').append($('#cmb_producto option:selected').text());
+            $('#txt_cantidad2').text('Cantidad:   ').append($('#txt_cantidad').val());
+            $('#txt_total2').text('Total compra:   $').append($('#txt_total').val());
+        }
+        fn_desglose();
         $('#txt_pago').keydown(function (e) {
-            console.log(e.keyCode);
-            if (e.keyCode == 13 || e.keyCode == 9 || e.keyCode == 'enter' || e.keyCode == 'tab') {
-                vuelto = $('#txt_vuelto').val(Math.round(pago) - (valorProducto / valor) * cantidad);
+            console.log('SOY EL VUELTO' + vuelto)
+            if (e.keyCode == 13 || e.keyCode == 9 || e.keyCode == 'enter' || e.keyCode == 'tab' && pago > calculoCompra) {
+                pago = $('#txt_pago').val();
+                vuelto = $('#txt_vuelto').val((Math.round(pago)) - (Math.round((valorProducto / valor) * cantidad)));
+                $('#lbl_vuelto').hide();
+                $('#txt_vuelto').removeClass('is-invalid');
+                $('#txt_vuelto').addClass('is-valid');
             }
+            if (pago < calculoCompra) {
+                console.log("entre al ELSE IF DEL VUELTO")
+                vuelto = $('#txt_vuelto').val('')
+                $('#lbl_vuelto').show();
+                $('#txt_vuelto').addClass('is-invalid');
+            }
+
         }).fail(function () {
             console.log('Error al consumir la API!');
         });
+
     })
+
 }
+
 
 
