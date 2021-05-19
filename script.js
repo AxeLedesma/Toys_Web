@@ -150,6 +150,8 @@ function fn_ocultarEtiquetas() {
     $('#lbl_producto').hide();
 
     $('#lbl_vuelto').hide();
+
+    $('#lbl_consola').hide();
 }
 
 function fn_nombreVacio() {
@@ -255,6 +257,27 @@ function fn_contrasenasIguales() {
         $('#lbl_contrasena2').hide();
         $('#txt_contrasena2').removeClass('is-invalid');
         $('#txt_contrasena2').addClass('is-valid');
+    }
+}
+
+function fn_consolaVacia() {
+
+    var consola = $('#cmb_consolas option:selected').text();
+
+    if (consola == ' -- Seleccione --') {
+
+        $('#lbl_consola').show();
+
+        $('#cmb_consolas').addClass('is-invalid');
+
+    } else {
+
+        $('#lbl_consola').hide();
+
+        $('#cmb_consolas').removeClass('is-invalid');
+
+        $('#cmb_consolas').addClass('is-valid');
+
     }
 }
 
@@ -393,6 +416,34 @@ function fn_moneda() {
     })
 
 }
+
+function fn_redireccionRegistro() {
+
+    var nombre = $('#txt_nombre').val();
+    var apellido = $('#txt_apellido').val();
+    var correo = $('#txt_correo').val();
+    var contrasena = $('#txt_contrasena').val();
+    var contrasena2 = $('#txt_contrasena2').val();
+    var consola = $('#cmb_consolas option:selected').text();
+    var segundos = 5;
+    var conteo = setInterval(function () {
+        if (nombre != "" && apellido != "" && correo != "" && contrasena != "" && contrasena == contrasena2 && consola != ' -- Seleccione --') {
+            $('#modalConteo').modal('show');
+            $("#txt_conteo").text('Seras redirigido al Inicio en ' + segundos + ' segundos');
+
+            if (segundos == 0) {
+                clearInterval(conteo);
+                window.open('index.html', "_self");
+            }
+            else if ($("#cancelarConteo").click(function () {
+                clearInterval(conteo);
+                $('#modalConteo').modal('hide');
+            }))
+                segundos--;
+        }
+    }, 1000);
+}
+fn_redireccionRegistro();
 
 
 
