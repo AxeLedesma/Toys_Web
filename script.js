@@ -344,6 +344,41 @@ function fn_cantidadVacia() {
     }
 }
 
+function fn_limpiarFormularioRegistro() {
+
+    $('#txt_nombre').val("");
+    $('#lbl_nombre').hide();
+    $('#txt_nombre').removeClass('is-invalid');
+    $('#txt_nombre').removeClass('is-valid');
+
+    $('#txt_apellido').val("");
+    $('#lbl_apellido').hide();
+    $('#txt_apellido').removeClass('is-invalid');
+    $('#txt_apellido').removeClass('is-valid');
+
+    $('#txt_contrasena').val("");
+    $('#lbl_contrasena').hide();
+    $('#txt_contrasena').removeClass('is-invalid');
+    $('#txt_contrasena').removeClass('is-valid');
+
+    $('#txt_correo').val("");
+    $('#lbl_correo').hide();
+    $('#txt_correo').removeClass('is-invalid');
+    $('#txt_correo').removeClass('is-valid');
+
+    $('#txt_contrasena2').val("");
+    $('#lbl_contrasena2').hide();
+    $('#txt_contrasena2').removeClass('is-invalid');
+    $('#txt_contrasena2').removeClass('is-valid');
+
+
+    $('#cmb_consolas').val('-- Seleccione --');
+    $('#lbl_consola').hide();
+    $('#cmb_consolas').removeClass('is-invalid');
+    $('#cmb_consolas').removeClass('is-valid');
+
+}
+
 
 function fn_moneda() {
     $.getJSON('https://mindicador.cl/api', function (data) {
@@ -427,7 +462,7 @@ function fn_redireccionRegistro() {
     var consola = $('#cmb_consolas option:selected').text();
     var segundos = 5;
     var conteo = setInterval(function () {
-        if (nombre != "" && apellido != "" && correo != "" && contrasena != "" && contrasena == contrasena2 && consola != ' -- Seleccione --') {
+        if (nombre != "" && apellido != "" && correo != "" && contrasena != "" && contrasena == contrasena2 && consola != '-- Seleccione --') {
             $('#modalConteo').modal('show');
             $("#txt_conteo").text('Seras redirigido al Inicio en ' + segundos + ' segundos');
 
@@ -441,9 +476,10 @@ function fn_redireccionRegistro() {
             }))
                 segundos--;
         }
-    }, 1000);
+    }, 1000); console.log('SOY EL LOG DE REDIRECCION')
 }
-fn_redireccionRegistro();
+
+
 
 
 
